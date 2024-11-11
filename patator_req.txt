@@ -1,0 +1,6 @@
+paramiko
+impacket
+pyopenssl
+dnspython
+IPy
+pysnmp

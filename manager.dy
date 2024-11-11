@@ -1,0 +1,70 @@
+from sys import argv
+from typing import Callable
+
+# class Command:
+#
+#     def __init__(self, command: str, placeholder: str) -> None:
+#         self.command = command
+#         self.placeholder = placeholder
+#
+#     def option(self, *args, **kwargs):
+#         args = tuple(filter(lambda x: isinstance(x, str), args))
+#         success_kwargs = [
+#            'default' 
+#         ]
+#         kwargs_ = {}
+#         for k, v in kwargs.items():
+#             if k in success_kwargs:
+#                 kwargs_.update({k: v})
+#             else:
+#                 raise Exception('arument: %s=%s is invalid...' % (k, v))
+#         print(args)
+#         print(kwargs_)
+#
+#     def arument(self, *args, **kwargs):
+#         ...
+
+class manager:
+
+    def __init__(self, argv: list) -> None:
+        self.argv = argv
+    
+    def command(self, command: str):
+        ...
+    
+    def option(self, *args, **kwargs):
+        args = tuple(filter(lambda x: isinstance(x, str), args))
+        success_kwargs = [
+           'default',
+           'bool_'
+        ]
+        kwargs_ = {}
+        for k, v in kwargs.items():
+            if k in success_kwargs:
+                kwargs_.update({k: v})
+            else:
+                raise Exception('arument: %s=%s is invalid...' % (k, v))
+        print(args)
+        print(kwargs_)
+
+    def arument(self, *args, **kwargs):
+        ...
+
+    def parse(self, callback: Callable):
+        ...
+
+#def _call
+
+mgr = manager(argv)
+dot = mgr.command('.')
+dot.add(
+    mgr.option(
+        '-p',
+        '--parse',
+        bool_=True
+    )
+)
+mgr.parse(dot, _call(p) => {
+    
+})
+

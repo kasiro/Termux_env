@@ -1,0 +1,10 @@
+[package]
+name = "md5_gen"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+fastrand = "2.1.1"
+itertools = "0.13.0"
+md5 = "0.7.0"
+num-format = "0.4.4"
